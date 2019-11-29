@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Know the whole world!</title>
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body {
+        background-image: url('city.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<body>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<br/><span class="contact100-form-title">
+					Get to know the whole world!<br/>
+				</span>
+            </form> 
+
+            <label class="label-input100" for="first-name">Nama Kota</label>
+			<div class="wrap-input100">
+				<input id="city" class="input100" type="text" name="kota" placeholder="Masukkan nama kota" required>
+				<span class="focus-input100"></span>
+            </div>
+            
+			<div class="button mx-auto p-5" id="mainbutton" aria-label="Basic example">
+				<a href="#" role="button" class="btn btn-outline-primary btn-lg btn-block p-5 mt-4 mb-5" id="login-mhs">Dapatkan detail lokasi</a>
+			</div>
+		</div>
+	</div>
+
+    <div class="container-contact100-form-btn">
+		<a class="contact100-form-btn" href="content.html" onclick="#">
+			<span>
+	    		Submit
+				<i class="zmdi zmdi-arrow-right m-l-8"></i>
+			</span>
+		</a>
+	</div>
+	  
+	<script>
+		obj = { table: "customers", limit: 20 };
+		dbParam = JSON.stringify(obj);
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				myObj = JSON.parse(this.responseText);
+				txt += "<table border='1'>"
+				for (x in myObj) {
+					txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+				}
+				txt += "</table>"
+				document.getElementById("city").innerHTML = txt;
+			}
+		}
+		xmlhttp.open("GET", "json_demo_db_post.php", true);
+		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xmlhttp.send("x=" + dbParam);
+	</script>
+
+</body>
+</html>
