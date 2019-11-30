@@ -33,7 +33,33 @@ body, html {
 
 /*---------------------------------------------*/
 a {
-	font-family: Raleway-SemiBold;
+	font-family: Raleway-Medium;
+	font-size: 14px;
+}
+
+p {
+	font-family: Raleway-Medium;
+	font-size: 14px;
+}
+
+h5 {
+  font-family: Avocados;
+  text-align : center;
+	font-size: 30px;
+	color: #666666;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+
+span {
+	font-family: bakery;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -53,19 +79,6 @@ a:hover {
 }
 
 /*---------------------------------------------*/
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 15px;
-}
-
-th {
-  text-align: center;
-  background-color: #e6e6e6;
-}
 
 table.center {
   margin-left:auto; 
@@ -194,7 +207,7 @@ iframe {
 .contact100-form-title {
   width: 100%;
   display: block;
-  font-family: Raleway-Black;
+  font-family: Avocados;
   font-size: 30px;
   color: #333333;
   line-height: 1.2;
@@ -221,22 +234,17 @@ iframe {
 
 
 .label-input100 {
-  font-family: Raleway-SemiBold;
-  font-size: 13px;
-  color: #555555;
-  line-height: 1.5;
-  text-transform: uppercase;
-  width: 100%;
-
-  padding-bottom: 11px;
+  font-family: Raleway-Medium;
+  font-size: 16px;
+  padding: 5px;
 }
 
 .input100 {
   display: block;
   width: 100%;
-  background: transparent;
-  font-family: Raleway-SemiBold;
-  font-size: 18px;
+  background: #f5f5f5;
+  font-family: Raleway-Medium;
+  font-size: 14px;
   color: #333333;
   line-height: 1.2;
   padding: 0 25px;
@@ -300,7 +308,11 @@ textarea.input100 {
 }
 
 .btn-1 {
-  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+  background-image: linear-gradient(to right, #7b68ee 0%, #87ceeb 51%, #7b68ee 100%);
+}
+
+.btn-2 {
+  background-image: linear-gradient(to right, #dc143c 0%, #ff6247 51%, #dc143c 100%);
 }
 
 /* The Modal (background) */
