@@ -251,111 +251,6 @@ textarea.input100 {
   padding-top: 19px;
   padding-bottom: 15px;
 }
-
-/*---------------------------------------------*/
-
-.focus-input100 {
-  position: absolute;
-  display: block;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  top: -1px;
-  left: -1px;
-  pointer-events: none;
-  border: 1px solid;
-  border-color: #007fff;
-
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-
-  -webkit-transform: scaleX(1.1) scaleY(1.3);
-  -moz-transform: scaleX(1.1) scaleY(1.3);
-  -ms-transform: scaleX(1.1) scaleY(1.3);
-  -o-transform: scaleX(1.1) scaleY(1.3);
-  transform: scaleX(1.1) scaleY(1.3);
-}
-
-.input100:focus + .focus-input100 {
-  visibility: visible;
-  opacity: 1;
-
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-
-
-
-/*------------------------------------------------------------------
-[ Button ]*/
-.container-contact100-form-btn {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: -4px;
-}
-
-.contact100-form-btn {
-  font-family: Raleway-Bold;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.2;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  min-width: 150px;  
-  height: 55px;
-  border-radius: 27px;
-  background: #007fff;
-  position: relative;
-  z-index: 1;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.contact100-form-btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  border-radius: 27px;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #333333;
-  opacity: 1;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.contact100-form-btn:hover:before {
-  opacity: 0;
-}
-
 .contact100-form-btn i {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -391,88 +286,43 @@ textarea.input100 {
 
 }
 
-
-/*------------------------------------------------------------------
-[ Alert validate ]*/
-
-.validate-input {
-  position: relative;
+.btn{
+  font-size: 12px;
+	letter-spacing: 2px;
+	padding: 13px 17px;
+  border: none;
+  transition: 0.5s;
+  background-size: 200% auto;
 }
 
-.alert-validate .focus-input100 {
-  box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
-  -moz-box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
-  -webkit-box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
-  -o-box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
-  -ms-box-shadow: 0 5px 20px 0px rgba(250, 66, 81, 0.1);
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
 }
 
-.alert-validate::before {
-  content: "";
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  background-color: transparent;
-  border: 1px solid #fa4251;
-  border-radius: 2px;
-  top: -1px;
-  left: -1px;
-  pointer-events: none;
+.btn-1 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
 }
 
-.btn-hide-validate {
-  font-family: Material-Design-Iconic-Font;
-  font-size: 18px;
-  color: #fa4251;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  height: 100%;
-  top: 0px;
-  right: -28px;
-}
-
-.rs1-alert-validate.alert-validate::before {
-  background-color: #fff;
-}
-
-.true-validate::after {
-  content: "\f26b";
-  font-family: Material-Design-Iconic-Font;
-  font-size: 18px;
-  color: #00ad5f;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  height: 100%;
-  top: 0px;
-  right: -28px;
-}
-
-/*---------------------------------------------*/
-@media (max-width: 576px) {
-  .btn-hide-validate {
-    right: 10px;
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  .true-validate::after {
-    right: 10px;
-  }
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }

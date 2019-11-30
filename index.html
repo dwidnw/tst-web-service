@@ -4,7 +4,12 @@
 	<title>Get to know the whole world!</title>
 	<meta charset="UTF-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+	<script src="index.js"></script>
+<!--===============================================================================================-->
 </head>
 <style>
     body {
@@ -16,31 +21,66 @@
 </style>
 
 <body>
-	<div class="container-contact100">
+	<nav class="navbar navbar-dark bg-primary" id="navbarITB">
+	  <a class="navbar-brand" href="#">
+		<img src="#" width="50" height="50" alt="">
+	  </a>
+	</nav>
+	<div class="container" align="center" style="margin-bottom:10px">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
+			<!--<form class="contact100-form validate-form">-->
 				<br/><span class="contact100-form-title">
-					Meet your travelling friend,
-					Get to know the whole world<br/>
-				</span> 
-            </form> 
+					More About Your City<br/>
+				</span>
+            <!--</form> -->
 
-            <label class="label-input100" for="first-name">Nama Kota</label>
-			<div class="wrap-input100">
-				<input id="city" class="input100" type="text" name="kota" placeholder="Masukkan nama kota" required>
-				<span class="focus-input100"></span>
-            </div>
-
-			<div class="container-contact100-form-btn">
-				<a class="contact100-form-btn" href="content.html" onclick="">
-					<span>
-						Submit
-						<i class="zmdi zmdi-arrow-right m-l-8"></i>
-					</span>
-				</a>
-			</div>
+            <label class="label-input100" for="first-name" align="left">Nama Kota</label>
+			<!--<div class="wrap-input100">-->
+				<form class="form-inline" action="#" style="align-self: center;" method="GET">
+                    <input id="kota" class="input100" type="text" name="kota" placeholder="Masukkan nama kota" ><br/>
+                    <button id="cariData" onclick="showModal();" class="btn btn-1" type="submit">Cari</button>
+				</form>
+                
+            <!--</div>-->
 		</div>
-	</div>
-	  
+
+    <div id="detailModal" class="modal" role="dialog" style="display: none">
+      <!-- Modal content -->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">City Details</h5>
+                </div>
+                <div class="modal-body">
+                    <!--<div id="dmods">-->
+                        <p>Nama Kota : <a id="hasilkota"></a> </p>
+                        <p>Kode Negara : <a id="hasilnegara"></a></p>
+                        <p>Latitude : <a id="lat"></a></p>
+                        <p>Longitude : <a id="lon"></a></p>
+                        <p>Main Weather : <a id="main"></a></p>
+                        <p>Description : <a id="desc"></a></p>
+                        <p>Pressure : <a id="pressure"></a></p>
+                        <p>Humidity : <a id="humidity"></a></p>
+                        <p>Temperature : <a id="temp"></a></p>
+                        <p>Wind Speed : <a id="wind"></a></p>
+
+                        <br/><h5> Recommended Video </h4>
+                        <div class="tablevideo" style="width:80%;" id="tabel-hasil-video">
+                            <div id="theadvideo">
+                                <p>
+                                </p>
+                            </div>
+                            <div id="tbodyvideo">
+                            </div>
+                        </div>
+                    <!--</div>-->
+                </div>
+                <div class="modal-footer">
+                    <button onclick="hideModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+		
 </body>
 </html>
