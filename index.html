@@ -7,7 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 	<script src="index.js"></script>
 <!--===============================================================================================-->
 </head>
@@ -21,9 +21,10 @@
 </style>
 
 <body>
-	<div class="container" align="center" style="margin-bottom:10px">
+	<div class="container" align="center" style="margin-top:100px">
 		<div class="wrap-contact100">
-			<br/><span class="contact100-form-title"> More About Your City<br/></span>
+			<br/><h5 class="contact100-form-title"> More About Your City</h5></span>
+            <!--</form> -->
 
             <label class="label-input100" for="first-name" align="left">Nama Kota</label>
 			<!--<div class="wrap-input100">-->
@@ -33,6 +34,7 @@
 				</form>
                 
             <!--</div>-->
+            </div>
 		</div>
 
     <div id="detailModal" class="modal" role="dialog" style="display: none">
@@ -55,7 +57,7 @@
                         <p>Temperature : <a id="temp"></a></p>
                         <p>Wind Speed : <a id="wind"></a></p>
 
-                        <br/><h5> Recommended Video </h4>
+                        <br/><h5> Recommended Video </h5>
                         <div class="tablevideo" style="width:80%;" id="tabel-hasil-video">
                             <div id="theadvideo">
                                 <p>
@@ -67,7 +69,7 @@
                     <!--</div>-->
                 </div>
                 <div class="modal-footer">
-                    <button onclick="hideModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button onclick="hideModal()" type="button" class="btn btn-2" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
