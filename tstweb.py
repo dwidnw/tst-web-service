@@ -4,8 +4,10 @@ import re
 import urllib.request
 from flask import request, Flask, jsonify, render_template
 from pytube import YouTube 
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config['DEBUG']=True
 
 
@@ -13,6 +15,7 @@ app.config['DEBUG']=True
 def get_weathers(city):
     #returning the weather in a specific city by inputing the name of the city
     try:
+        res=[]
         param={
             'q':city,
             'appid':'3d6ae3df59815d39dbf27c8a52460ed0'
@@ -80,11 +83,7 @@ def youtubeSearch(keyword):
 def index2():
     masukkan = request.args.get('keyword')
     return youtubeSearch(masukkan)
-
-@app.route('/', methods=['GET'])
-def home():
-    return render_template("index.html")
-
+    
 # execute the app #
 if __name__ == '__main__':
     app.run()
